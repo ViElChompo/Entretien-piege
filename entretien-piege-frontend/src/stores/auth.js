@@ -22,8 +22,8 @@ export const useAuthStore = defineStore('auth', {
         
         return true
       } catch (error) {
-        return false
-      }
+        console.error('Login failed:', error.response?.data || error.message)
+        return false}
     },
     
     async register(userData) {
