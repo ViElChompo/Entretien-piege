@@ -9,7 +9,13 @@ use Illuminate\Support\Facades\Auth;
 class ProgressController extends Controller
 {
     public function store(Request $request)
+    
     {
+
+        // Debugging authentication
+    if (!Auth::check()) {
+        return response()->json(['message' => 'User not authenticated'], 401);
+    }
         $request->validate([
             'story_id' => 'required|exists:stories,id',
             'current_chapter_id' => 'required|exists:chapters,id',

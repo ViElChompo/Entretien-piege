@@ -91,7 +91,7 @@ class StorySeeder extends Seeder
         
         Choice::create([
             'chapter_id' => $chap2->id,
-            'text' => "Stresser",
+            'text' => "Stressé",
             'next_chapter_id' => $chap3->id
         ]);
         
