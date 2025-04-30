@@ -7,8 +7,8 @@ Une application interactive de narration où vous passez un entretien d'embauche
 ## Aperçu
 
 Cette application se compose de:
-- Un backend Laravel 10.x fournissant une API RESTful
-- Un frontend Vue.js 3.x pour l'interface utilisateur
+- Un backend Laravel V12.10.2 fournissant une API RESTful
+- Un frontend Vue.js V3.5.13 pour l'interface utilisateur
 - Système de progression sauvegardée
 - Authentification des utilisateurs
 - Navigation dynamique entre les chapitres
@@ -78,14 +78,21 @@ L'histoire est composée de 5 chapitres:
 ## Technologies utilisées
 
 - **Backend**:
-  - Laravel 10.x
+  - Laravel V12.10.2
   - Laravel Sanctum pour l'authentification
   - API RESTful versionnée
   - MySQL
 
 - **Frontend**:
-  - Vue.js 3.x avec Composition API
+  - Vue.js V3.5.13 avec Composition API
   - Vue Router pour la navigation
   - Pinia pour la gestion d'état
   - Axios pour les requêtes HTTP
 
+- **Script Serveur Web**:
+   - Veuillez starter le serveur avec la commande suivante: 
+      ```bash
+      
+      ./start.sh
+
+      ```
