@@ -8,17 +8,17 @@ export const useProgressStore = defineStore('progress', {
   }),
   actions: {
     async saveProgress(storyId) {
-      try {
+
         await axios.post('/api/v1/progress/save', {
           story_id: storyId,
           current_chapter_id: this.currentChapterId,
           choices_made: this.choicesMade
-        })
-        return true
-      } catch (error) {
-        console.error('Erreur sauvegarde progression', error)
-        return false
-      }
+        }).then((response) => {
+          console.log('Progression sauvegardée', response.data)
+        } ).catch((error) => {
+          console.error('Erreur sauvegarde progression', error)
+        } ) 
+      
     },
     
     async loadProgress(storyId) {

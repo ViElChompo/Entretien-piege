@@ -5,6 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Progress extends Model
 {
+
+    protected $table = 'progresses';
     protected $fillable = ['user_id', 'story_id', 'current_chapter_id', 'choices_made'];
     
     protected $casts = [
