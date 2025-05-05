@@ -115,7 +115,7 @@ try {
     router.push('/');
   } else {
     // Display an error message if registration fails
-    error.value = 'Erreur lors de l\'inscription. Veuillez réessayer.';
+    error.value = "Erreur lors de l'inscription. Veuillez réessayer.";
   }
 } catch (err) {
   // Display a generic error message if an exception occurs
