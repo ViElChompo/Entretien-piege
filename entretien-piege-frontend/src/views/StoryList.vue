@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- Page title -->
-    <h1>Histoires disponibles</h1>
+    <h1>HistoistoriesData disponibles</h1>
     
     <!-- Loading state: Show a loading message while fetching stories -->
     <div v-if="loading">Chargement...</div>
     
     <!-- Error state: Show an error message if fetching stories fails -->
-    <div v-else-if="error">Erreur lors du chargement des histoires.</div>
+    <div v-else-if="error">Erreur lors du chargement des histoistoriesData.</div>
     
     <!-- Stories list -->
     <div v-else>
@@ -40,7 +40,7 @@
 // Import Vue utilities and libraries
 import { ref, onMounted } from 'vue'; // Reactive variables and lifecycle hook
 import axios from 'axios'; // For making API requests
-import { useAuthStore } from '../stores/auth'; // Store for managing user authentication
+import { useAuthStore } from '../stostoriesData/auth'; // Store for managing user authentication
 
 // Reactive variables to manage the state of the component
 const stories = ref([]); // List of stories
@@ -60,15 +60,15 @@ return null; // Return null if no chapters are available
 onMounted(async () => {
 try {
   // Fetch the list of stories
-  const res = await axios.get('/api/v1/stories');
+  const storiesData = await axios.get('/api/v1/stories');
   
   // Load additional details for each story to fetch the chapters
-  for (const story of res.data) {
+  for (const story of storiesData.data) {
     const storyDetail = await axios.get(`/api/v1/stories/${story.id}`);
     story.chapters = storyDetail.data.chapters; // Attach chapters to each story
   }
   
-  stories.value = res.data; // Update the stories list
+  stories.value = storiesData.data; // Update the stories list
 } catch (err) {
   // Handle errors during the fetch process
   error.value = true;
