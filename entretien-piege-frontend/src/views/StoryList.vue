@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- Page title -->
-    <h1>HistoistoriesData disponibles</h1>
+    <h1>Bienvenue à l'entretien piégé</h1>
     
     <!-- Loading state: Show a loading message while fetching stories -->
     <div v-if="loading">Chargement...</div>
     
     <!-- Error state: Show an error message if fetching stories fails -->
-    <div v-else-if="error">Erreur lors du chargement des histoistoriesData.</div>
+    <div v-else-if="error">Erreur lors du chargement des histoires.</div>
     
     <!-- Stories list -->
     <div v-else>
@@ -40,7 +40,7 @@
 // Import Vue utilities and libraries
 import { ref, onMounted } from 'vue'; // Reactive variables and lifecycle hook
 import axios from 'axios'; // For making API requests
-import { useAuthStore } from '../stostoriesData/auth'; // Store for managing user authentication
+import { useAuthStore } from '../stores/auth';// Store for managing user authentication
 
 // Reactive variables to manage the state of the component
 const stories = ref([]); // List of stories
