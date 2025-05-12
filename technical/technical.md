@@ -20,6 +20,13 @@
   - Pinia pour la gestion d'état
   - Axios pour les requêtes HTTP
 
+
+## Clonez le repo
+
+```bash
+    https://github.com/ViElChompo/Entretien-piege.git       
+```
+
 ## Installation Backend
 
 Veuillez vous rendre dans le dossier backend
@@ -28,22 +35,21 @@ Veuillez vous rendre dans le dossier backend
 cd entretien-piege-backend
 ```
 
-1. Cloner le dépôt backend
-2. Installer les dépendances:
+1. Installer les dépendances:
    ```bash
    composer install
    ```
-3. Copier le fichier d'environnement:
+2. Copier le fichier d'environnement:
 
    ```bash
    cp .env.example .env
    ```
-4. Configurer le fichier `.env` (base de données, etc.)
-5. Générer la clé d'application:
+3. Configurer le fichier `.env` (base de données, etc.)
+4. Générer la clé d'application:
    ```bash
    php artisan key:generate
    ```
-6. Exécuter les migrations et seeds:
+5. Exécuter les migrations et seeds:
    ```bash
    php artisan migrate --seed
    ```
@@ -52,12 +58,12 @@ cd entretien-piege-backend
 
 Veuillez vous rendre dans le dossier frontend pour installer les dépendances du frontend.
 
-1. Cloner le dépôt frontend
-2. Installer les dépendances:
+
+1. Installer les dépendances:
    ```bash
    npm install
    ```
-3. Configurer le port de l'API si nécessaire dans le fichier `axios.js`
+2. Configurer le port de l'API si nécessaire dans le fichier `axios.js`
 
 ## Script Pour Démarrer Les Serveurs:
 
