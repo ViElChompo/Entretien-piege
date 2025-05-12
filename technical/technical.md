@@ -20,11 +20,10 @@
   - Pinia pour la gestion d'état
   - Axios pour les requêtes HTTP
 
-
 ## Clonez le repo
 
 ```bash
-    https://github.com/ViElChompo/Entretien-piege.git       
+    git clone https://github.com/ViElChompo/Entretien-piege.git
 ```
 
 ## Installation Backend
@@ -44,6 +43,7 @@ cd entretien-piege-backend
    ```bash
    cp .env.example .env
    ```
+
 3. Configurer le fichier `.env` (base de données, etc.)
 4. Générer la clé d'application:
    ```bash
@@ -58,7 +58,6 @@ cd entretien-piege-backend
 
 Veuillez vous rendre dans le dossier frontend pour installer les dépendances du frontend.
 
-
 1. Installer les dépendances:
    ```bash
    npm install
@@ -69,7 +68,7 @@ Veuillez vous rendre dans le dossier frontend pour installer les dépendances du
 
 - Veuillez démarrer les serveurs avec la commande suivante:
 
-    start.sh est un petit script qui s'occupe de lancer les serveurs des dossiers front et back pour vous.
+  start.sh est un petit script qui s'occupe de lancer les serveurs des dossiers front et back pour vous.
 
   ```bash
 
