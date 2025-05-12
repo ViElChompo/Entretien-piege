@@ -3,7 +3,7 @@
 - PHP 8.1 ou supérieur
 - Composer
 - Node.js 14+ et npm
-- MySQL ou autre base de données supportée par Laravel
+- SQLite ou autre base de données supportée par Laravel
 
 ## Technologies utilisées
 
@@ -50,7 +50,7 @@ cd entretien-piege-backend
 
 ## Installation Frontend
 
-Veuillez vous rendre dans le dossier frontend pour installer les dépendances front.
+Veuillez vous rendre dans le dossier frontend pour installer les dépendances du frontend.
 
 1. Cloner le dépôt frontend
 2. Installer les dépendances:
@@ -61,7 +61,9 @@ Veuillez vous rendre dans le dossier frontend pour installer les dépendances fr
 
 ## Script Pour Démarrer Les Serveurs:
 
-- Veuillez starter le serveur avec la commande suivante:
+- Veuillez démarrer les serveurs avec la commande suivante:
+
+    start.sh est un petit script qui s'occupe de lancer les serveurs des dossiers front et back pour vous.
 
   ```bash
 
@@ -81,7 +83,7 @@ mp: fullstache1234!
 
 ```
 
-- **Vous pouvez vous connecter dans postman.**
+- **Vous pouvez vous connecter dans Postman ou avec Curl.**
 
 Requête "POST" à l'url suivant:
 
