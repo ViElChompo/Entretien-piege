@@ -30,12 +30,19 @@ Cette application se compose de:
 
 ## Installation Backend
 
+veuillez vous rendre dans le dossier backend
+   ```bash
+   cd entretien-piege-backend
+   ```
+
+
 1. Cloner le dépôt backend
 2. Installer les dépendances:
    ```bash
    composer install
    ```
 3. Copier le fichier d'environnement:
+   
    ```bash
    cp .env.example .env
    ```
@@ -48,23 +55,27 @@ Cette application se compose de:
    ```bash
    php artisan migrate --seed
    ```
-7. Démarrer le serveur:
-   ```bash
-   php artisan serve
-   ```
+
 
 ## Installation Frontend
+Veuillez vous rendre dans le dossier frontend pour installer les dépendances front.
 
 1. Cloner le dépôt frontend
 2. Installer les dépendances:
    ```bash
    npm install
    ```
-3. Configurer l'URL de l'API si nécessaire dans le fichier `axios.js`
-4. Démarrer le serveur de développement:
-   ```bash
-   npm run dev
-   ```
+3. Configurer le port de l'API si nécessaire dans le fichier `axios.js`
+
+
+- **Script Serveur Web**:
+   - Veuillez starter le serveur avec la commande suivante: 
+      ```bash
+      
+      ./start.sh
+
+      ```
+
 
 ## Structure de l'histoire
 
@@ -89,10 +100,3 @@ L'histoire est composée de 5 chapitres:
   - Pinia pour la gestion d'état
   - Axios pour les requêtes HTTP
 
-- **Script Serveur Web**:
-   - Veuillez starter le serveur avec la commande suivante: 
-      ```bash
-      
-      ./start.sh
-
-      ```
