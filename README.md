@@ -55,16 +55,6 @@ veuillez vous rendre dans le dossier backend
    ```bash
    php artisan migrate --seed
    ```
-7. Un compte admin à été créé afin de répondre à la demande d'une route protégée et accessible uniquement à un admin: 
-
-
-Veuillez vous connecter avec : 
-
-   ```bash
-   Email: admin@example.com
-   mp: fullstache1234!
-   
-   ```
 
 ## Installation Frontend
 Veuillez vous rendre dans le dossier frontend pour installer les dépendances front.
@@ -108,4 +98,52 @@ L'histoire est composée de 5 chapitres:
   - Vue Router pour la navigation
   - Pinia pour la gestion d'état
   - Axios pour les requêtes HTTP
+
+## Compte Admin Pour Route Protégée
+
+Un compte admin à été créé afin de répondre à la demande d'une route protégée et accessible uniquement à un admin: 
+
+
+Veuillez vous connecter avec : 
+
+   ```bash
+   Email: admin@example.com
+   mp: fullstache1234!
+   
+   ```
+
+   - **Vous pouvez vous connecter dans postman.**
+
+   Requête "POST" à l'url suivant:
+
+   ```bash
+      http://127.0.0.1:8000/api/v1/login
+
+   ```
+
+   Body de la requête: 
+
+   ```bash
+      {
+          "email": "admin@example.com",
+          "password": "fullstache1234!"
+      }
+   ```
+
+
+   **Deuxième partie "GET"**
+
+
+
+   Récupérer le token JWT obtenu grâce au login et le mettre dans la section 
+   "Authorization" -> bearer token -> mettre le JWT dans la zone de texte prévue à cet effet.
+
+   Requête de type "GET"
+
+
+   ```bash
+      URL de la route protégée: http://127.0.0.1:8000/api/v1/admin/only
+   ```
+   
+   Et vous allez recevoir un message vous assurant que vous êtes connectés en tant qu'admin. 
 
