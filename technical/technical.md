@@ -106,15 +106,17 @@ Body de la requête:
    }
 ```
 
-**Deuxième partie "GET"**
+Deuxième partie "GET":
 
 Récupérer le token JWT obtenu grâce au login et le mettre dans la section
 "Authorization" -> bearer token -> mettre le JWT dans la zone de texte prévue à cet effet.
 
-Requête de type "GET"
+Requête "GET" sur l'endpoint /admin/only: 
+
+URL de la route protégée:
 
 ```bash
-   URL de la route protégée: http://127.0.0.1:8000/api/v1/admin/only
+    http://127.0.0.1:8000/api/v1/admin/only
 ```
 
 Et vous allez recevoir un message vous assurant que vous êtes connectés en tant qu'admin.
