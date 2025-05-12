@@ -1,7 +1,7 @@
 # Entretien d'embauche piégé - Application interactive
 
 <p align="center">
-  <img src="https://media.heig-vd.ch/image/upload/v1615474924/logo_heig_standard_fr_blanc_mg6cgg.svg" alt="Logo HEIG-VD" width="300"/>
+  <img src="/img/heig-vd-logo.gif" alt="Logo HEIG-VD" width="300"/>
 </p>
 
 ## Présentation
