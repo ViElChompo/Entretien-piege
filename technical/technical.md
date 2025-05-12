@@ -23,7 +23,7 @@
 ## Clonez le repo
 
 ```bash
-    git clone https://github.com/ViElChompo/Entretien-piege.git
+git clone https://github.com/ViElChompo/Entretien-piege.git
 ```
 
 ## Installation Backend
@@ -71,10 +71,8 @@ Veuillez vous rendre dans le dossier frontend pour installer les dépendances du
   start.sh est un petit script qui s'occupe de lancer les serveurs des dossiers front et back pour vous.
 
   ```bash
-
-  ./start.sh
-
-  ```
+    ./start.sh
+ ```
 
 ## Compte Admin Pour Route Protégée
 
@@ -85,7 +83,6 @@ Veuillez vous connecter avec :
 ```bash
 Email: admin@example.com
 mp: fullstache1234!
-
 ```
 
 - **Vous pouvez vous connecter dans Postman ou avec Curl.**
