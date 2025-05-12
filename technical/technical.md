@@ -12,7 +12,7 @@
   - Laravel V12.10.2
   - Laravel Sanctum pour l'authentification
   - API RESTful versionnée
-  - MySQL
+  - SQLite
 
 - **Frontend**:
   - Vue.js V3.5.13 avec Composition API
