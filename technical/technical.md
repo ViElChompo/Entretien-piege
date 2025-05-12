@@ -72,9 +72,9 @@ Veuillez vous rendre dans le dossier frontend pour installer les dépendances du
 
   ```bash
     ./start.sh
- ```
+    ```
 
-## Compte Admin Pour Route Protégée
+## Compte Admin Pour Route Protégée:
 
 Un compte admin à été créé afin de répondre à la demande d'une route protégée et accessible uniquement à un admin:
 
@@ -85,13 +85,12 @@ Email: admin@example.com
 mp: fullstache1234!
 ```
 
-- **Vous pouvez vous connecter dans Postman ou avec Curl.**
+**Vous pouvez vous connecter dans Postman ou avec Curl.**
 
-Requête "POST" à l'url suivant:
+Requête "POST" à l'url suivant
 
 ```bash
-   http://127.0.0.1:8000/api/v1/login
-
+http://127.0.0.1:8000/api/v1/login
 ```
 
 Body de la requête:
