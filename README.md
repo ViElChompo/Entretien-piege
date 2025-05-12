@@ -55,7 +55,16 @@ veuillez vous rendre dans le dossier backend
    ```bash
    php artisan migrate --seed
    ```
+7. Un compte admin à été créé afin de répondre à la demande d'une route protégée et accessible uniquement à un admin: 
 
+
+Veuillez vous connecter avec : 
+
+   ```bash
+   Email: admin@example.com
+   mp: fullstache1234!
+   
+   ```
 
 ## Installation Frontend
 Veuillez vous rendre dans le dossier frontend pour installer les dépendances front.
