@@ -18,8 +18,8 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
-            'password' => Hash::make('fullstache1234!'), // Remplacez par un mot de passe sécurisé
-            'role' => 'admin', // Spécifier que cet utilisateur est admin
+            'password' => Hash::make('fullstache1234!'), 
+            'role' => 'admin', 
             'created_at' => now(),
             'updated_at' => now(),
         ]);
