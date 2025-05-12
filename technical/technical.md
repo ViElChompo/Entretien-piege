@@ -22,7 +22,7 @@
 
 ## Installation Backend
 
-veuillez vous rendre dans le dossier backend
+Veuillez vous rendre dans le dossier backend
 
 ```bash
 cd entretien-piege-backend
@@ -38,7 +38,6 @@ cd entretien-piege-backend
    ```bash
    cp .env.example .env
    ```
-
 4. Configurer le fichier `.env` (base de données, etc.)
 5. Générer la clé d'application:
    ```bash
