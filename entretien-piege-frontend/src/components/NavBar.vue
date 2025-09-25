@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="logo underline decoration-lime-300 underline-offset-8 capitalize">
+    <div class="logo underline-offset-8 capitalize">
       <router-link to="/">Entretien Piégé</router-link>
     </div>
     <span>
@@ -48,7 +48,7 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #4CAF50;
 }
 
 .nav-links a,

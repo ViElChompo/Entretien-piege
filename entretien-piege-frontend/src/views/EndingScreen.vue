@@ -6,7 +6,7 @@
     <!-- Conditional rendering for different types of endings -->
 
     <!-- Case: "accepted" ending -->
-    <div v-if="ending === 'accepted'" class="ending accepted">
+    <div v-if="ending === 'accepted'" class="ending accepted text-gray-900">
       <div class="icon">✅</div>
       <!-- Icon for accepted ending -->
       <p>Félicitations, vous êtes accepté !</p>

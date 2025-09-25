@@ -1,42 +1,63 @@
 <template>
-  <!-- Display loading message while the chapter is being fetched -->
-  <div v-if="loading">Chargement...</div>
-  
-  <!-- Display error message if the chapter is not found -->
-  <div v-else-if="!chapter">Chapitre introuvable</div>
-  
-  <!-- Main container for chapter content -->
-  <div v-else class="chapter-container">
-    <!-- Display the chapter title -->
-    <h2>{{ chapter.title }}</h2>
-    
-    <!-- Display the chapter content -->
-    <div class="chapter-content ">{{ chapter.content }}</div>
-    
-    <!-- Conditional rendering for choices if the chapter is not an ending -->
-    <div v-if="!chapter.is_ending" class="choices-container">
-      <h3>Que faites-vous ?</h3>
-      
-      <!-- Render a button for each choice -->
-      <button 
-        v-for="choice in chapter.choices" 
-        :key="choice.id" 
-        @click="makeChoice(choice)"
-        class="choice-button text-gray-900"
-      >
-        {{ choice.text }}
-      </button>
+  <!-- État de chargement -->
+  <div v-if="loading" class="text-center py-10 text-gray-400">
+    Chargement...
+  </div>
+
+  <!-- État d'erreur -->
+  <div v-else-if="!chapter" class="text-center py-10 text-red-500">
+    Chapitre introuvable
+  </div>
+
+  <!-- Contenu du chapitre -->
+  <div v-else class="max-w-3xl mx-auto px-4 py-10 space-y-8">
+    <!-- Titre -->
+    <h2 class="text-2xl md:text-3xl font-extrabold text-white">
+      {{ chapter.title }}
+    </h2>
+
+    <!-- Contenu -->
+    <div class="bg-white text-gray-900 rounded-2xl border shadow-sm p-6 md:p-8 leading-relaxed">
+      {{ chapter.content }}
     </div>
-    
-    <!-- If the chapter is an ending, display the ending screen -->
-    <div v-else class="ending-container">
-      <!-- Component to display the ending type -->
+
+    <!-- Choix -->
+    <div v-if="!chapter.is_ending" class="space-y-4">
+      <h3 class="text-lg font-semibold text-gray-200">Que faites-vous ?</h3>
+
+      <div class="space-y-3">
+        <button
+          v-for="choice in chapter.choices"
+          :key="choice.id"
+          @click="makeChoice(choice)"
+          class="w-full text-left rounded-xl border bg-gray-50 px-4 py-3
+                 hover:bg-white hover:shadow-sm
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                 transition text-gray-900"
+        >
+          {{ choice.text }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Fin -->
+    <div v-else class="space-y-6">
       <EndingScreen :ending="chapter.ending_type" />
-      <!-- Link to return to the list of stories -->
-      <router-link to="/" class="back-button">Retour à la liste des histoires</router-link>
+
+      <router-link
+        to="/"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border
+               bg-gray-800 text-gray-100 hover:bg-gray-700
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+               transition"
+      >
+        <i class="pi pi-arrow-left text-sm"></i>
+        Retour à la liste des histoires
+      </router-link>
     </div>
   </div>
 </template>
+
 
 <script setup>
 // Import Vue.js utilities and libraries

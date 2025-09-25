@@ -1,40 +1,65 @@
 <template>
-  <div display:column >
-    <!-- Page title -->
-    <h1 class="mb-4 text-2xl">Bienvenue à l'entretien piégé</h1>
-    
-    <!-- Loading state: Show a loading message while fetching stories -->
-    <div v-if="loading">Chargement...</div>
-    
-    <!-- Error state: Show an error message if fetching stories fails -->
-    <div v-else-if="error">Erreur lors du chargement des histoires.</div>
-    
-    <!-- Stories list -->
-    <div v-else>
-      <!-- Iterate over the list of stories and display each one -->
-      <div v-for="story in stories" :key="story.id" class="story-card space-y-4">
-        <!-- Story title -->
-        <!--<h2>{{ story.title }}</h2>-->
-        
-        <!-- Story description -->
-        <p>{{ story.description }}</p>
-        
-        <!-- Button to start the story if the user is authenticated -->
-        <router-link v-if="authStore.isAuthenticated" 
-                     :to="{ name: 'ChapterView', params: { id: getFirstChapterId(story) } }" 
-                     class="start-btn">
-          Commencer l'histoire
-        </router-link>
-        
-        <!-- Message prompting the user to log in if not authenticated -->
-        <div v-else class="auth-message">
-          <p>Connectez-vous pour commencer cette histoire</p>
-          <router-link to="/login" class="login-btn">Se connecter</router-link>
+  <section class="mx-auto max-w-3xl px-4 py-10 space-y-8">
+    <!-- Titre de page -->
+    <header class="space-y-2">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-white">
+        Bienvenue à l'entretien piégé
+      </h1>
+      <div class="h-px w-full bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+    </header>
+
+    <!-- États de chargement / erreur -->
+    <div v-if="loading" class="text-center py-10 text-gray-400">Chargement...</div>
+    <div v-else-if="error" class="text-center py-10 text-red-400">Erreur lors du chargement des histoires.</div>
+
+    <!-- Liste d'histoires -->
+    <div v-else class="space-y-6">
+      <article
+        v-for="story in stories"
+        :key="story.id"
+        class="bg-white text-gray-900 rounded-2xl border shadow-sm p-6 md:p-8"
+      >
+        <!-- Titre + description -->
+        <div class="space-y-2">
+          <h2 class="text-lg md:text-xl font-semibold">{{ story.title }}</h2>
+          <p class="text-gray-600">{{ story.description }}</p>
         </div>
-      </div>
+
+        <!-- Actions -->
+        <div class="mt-6">
+          <!-- Utilisateur connecté -->
+          <router-link
+            v-if="authStore.isAuthenticated"
+            :to="{ name: 'ChapterView', params: { id: getFirstChapterId(story) } }"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border
+                   bg-gray-900 text-white hover:bg-gray-800
+                   focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                   transition"
+          >
+            <i class="pi pi-play text-sm"></i>
+            Commencer l'histoire
+          </router-link>
+
+          <!-- Invité -->
+          <div v-else class="flex flex-col sm:flex-row sm:items-center gap-3">
+            <p class="text-sm text-gray-600">Connectez-vous pour commencer cette histoire</p>
+            <router-link
+              to="/login"
+              class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border
+                     bg-white text-gray-900 hover:bg-gray-50
+                     focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                     transition"
+            >
+              <i class="pi pi-sign-in text-sm"></i>
+              Se connecter
+            </router-link>
+          </div>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
 </template>
+
 
 <script setup>
 // Import Vue utilities and libraries
