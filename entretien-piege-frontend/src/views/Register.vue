@@ -12,7 +12,7 @@
     <form @submit.prevent="register">
       <!-- Name input field -->
       <div class="form-group">
-        <label for="name">Nom</label>
+        <label for="name">Prénom</label>
         <input 
           type="text" 
           id="name" 
