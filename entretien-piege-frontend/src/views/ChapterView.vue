@@ -11,7 +11,7 @@
     <h2>{{ chapter.title }}</h2>
     
     <!-- Display the chapter content -->
-    <div class="chapter-content">{{ chapter.content }}</div>
+    <div class="chapter-content ">{{ chapter.content }}</div>
     
     <!-- Conditional rendering for choices if the chapter is not an ending -->
     <div v-if="!chapter.is_ending" class="choices-container">
@@ -22,7 +22,7 @@
         v-for="choice in chapter.choices" 
         :key="choice.id" 
         @click="makeChoice(choice)"
-        class="choice-button"
+        class="choice-button text-gray-900"
       >
         {{ choice.text }}
       </button>

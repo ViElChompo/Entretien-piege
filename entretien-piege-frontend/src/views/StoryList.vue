@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div display:column >
     <!-- Page title -->
-    <h1>Bienvenue à l'entretien piégé</h1>
+    <h1 class="mb-4 text-2xl">Bienvenue à l'entretien piégé</h1>
     
     <!-- Loading state: Show a loading message while fetching stories -->
     <div v-if="loading">Chargement...</div>
@@ -12,9 +12,9 @@
     <!-- Stories list -->
     <div v-else>
       <!-- Iterate over the list of stories and display each one -->
-      <div v-for="story in stories" :key="story.id" class="story-card">
+      <div v-for="story in stories" :key="story.id" class="story-card space-y-4">
         <!-- Story title -->
-        <h2>{{ story.title }}</h2>
+        <!--<h2>{{ story.title }}</h2>-->
         
         <!-- Story description -->
         <p>{{ story.description }}</p>

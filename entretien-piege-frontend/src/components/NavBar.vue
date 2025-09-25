@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="logo">
+    <div class="logo underline decoration-lime-300 underline-offset-8 capitalize">
       <router-link to="/">Entretien Piégé</router-link>
     </div>
     <span>

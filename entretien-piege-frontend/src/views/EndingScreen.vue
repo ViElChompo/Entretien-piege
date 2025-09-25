@@ -1,7 +1,7 @@
 <template>
   <div class="ending-screen">
     <!-- Display the title of the ending screen -->
-    <h3>Fin de l'histoire</h3>
+    <h3 class="text-gray-900 text-xl font-bold">Fin de l'histoire</h3>
 
     <!-- Conditional rendering for different types of endings -->
 
@@ -17,7 +17,7 @@
     </div>
 
     <!-- Case: "rejected" ending -->
-    <div v-else-if="ending === 'rejected'" class="ending rejected">
+    <div v-else-if="ending === 'rejected'" class="ending rejected text-gray-900">
       <div class="icon">❌</div>
       <!-- Icon for rejected ending -->
       <p>Désolé, votre candidature a été refusée.</p>
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Case: "blacklisted" ending -->
-    <div v-else-if="ending === 'blacklisted'" class="ending blacklisted">
+    <div v-else-if="ending === 'blacklisted'" class="ending blacklisted text-gray-900">
       <div class="icon">🚫</div>
       <!-- Icon for blacklisted ending -->
       <p>Vous êtes blacklisté de cette entreprise.</p>
