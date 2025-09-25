@@ -4,7 +4,7 @@
       <router-link to="/">Entretien Piégé</router-link>
     </div>
     <span>
-      Bonjour{{
+      Bonjour {{
         authStore.isAuthenticated ? authStore.user?.name : "Invité"
       }}</span
     >
