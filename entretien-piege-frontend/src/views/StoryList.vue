@@ -2,7 +2,7 @@
   <section class="mx-auto max-w-3xl px-4 py-10 space-y-8">
     <!-- Titre de page -->
     <header class="space-y-2">
-      <h1 class="text-2xl md:text-3xl font-extrabold text-white">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900">
         Bienvenue à l'entretien piégé
       </h1>
       <div class="h-px w-full bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>

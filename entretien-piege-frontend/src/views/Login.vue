@@ -30,6 +30,7 @@
         <div>
           <label for="password" class="block text-sm font-medium mb-1">Mot de passe</label>
           <Password
+          class="w-full"
             inputId="password"
             v-model="form.password"
             :feedback="false"

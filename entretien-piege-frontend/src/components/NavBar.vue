@@ -1,20 +1,34 @@
 <template>
-  <nav>
-    <div class="logo underline-offset-8 capitalize">
+  <!-- Neutre : pas de bg/border/padding ici -->
+  <nav class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="underline-offset-8 capitalize font-bold text-lg text-emerald-600">
       <router-link to="/">Entretien Piégé</router-link>
     </div>
-    <span>
-      Bonjour {{
-        authStore.isAuthenticated ? authStore.user?.name : "Invité"
-      }}</span
-    >
-    <div class="nav-links">
+
+    <!-- Message utilisateur -->
+    <span class="text-sm text-gray-700">
+      Bonjour {{ authStore.isAuthenticated ? authStore.user?.name : 'Invité' }}
+    </span>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4">
       <template v-if="authStore.isAuthenticated">
-        <button @click="logout">Déconnexion</button>
+        <button @click="logout" class="text-sm text-gray-700 hover:text-gray-900 transition">
+          Déconnexion
+        </button>
       </template>
       <template v-else>
-        <router-link to="/login">Connexion</router-link>
-        <router-link to="/register">Inscription</router-link>
+        <router-link
+          to="/register"
+          class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg
+                 bg-gray-900 text-white text-sm hover:bg-gray-800
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                 transition"
+        >
+          <i class="pi pi-user-plus text-sm"></i>
+          Inscription
+        </router-link>
       </template>
     </div>
   </nav>
@@ -23,45 +37,7 @@
 <script setup>
 import { useAuthStore } from "../stores/auth";
 import { useRouter } from "vue-router";
-
 const authStore = useAuthStore();
 const router = useRouter();
-
-console.log("Nom utilisateur connecté :", authStore.user);
-
-const logout = async () => {
-  await authStore.logout();
-  router.push("/login");
-};
+const logout = async () => { await authStore.logout(); router.push("/login"); };
 </script>
-
-<style scoped>
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #4CAF50;
-}
-
-.nav-links a,
-.nav-links button {
-  margin-left: 15px;
-  text-decoration: none;
-  color: #333;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-}
-</style>
