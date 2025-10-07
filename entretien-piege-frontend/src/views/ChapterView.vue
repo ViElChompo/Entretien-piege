@@ -12,7 +12,7 @@
   <!-- Contenu du chapitre -->
   <div v-else class="max-w-3xl mx-auto px-4 py-10 space-y-8">
     <!-- Titre -->
-    <h2 class="text-2xl md:text-3xl font-extrabold text-white">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">
       {{ chapter.title }}
     </h2>
 
@@ -23,7 +23,7 @@
 
     <!-- Choix -->
     <div v-if="!chapter.is_ending" class="space-y-4">
-      <h3 class="text-lg font-semibold text-gray-200">Que faites-vous ?</h3>
+      <h3 class="text-lg font-semibold text-gray-900">Que faites-vous ?</h3>
 
       <div class="space-y-3">
         <button

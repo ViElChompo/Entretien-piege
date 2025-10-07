@@ -22,7 +22,7 @@
         <!-- Titre + description -->
         <div class="space-y-2">
           <h2 class="text-lg md:text-xl font-semibold">{{ story.title }}</h2>
-          <p class="text-gray-600">{{ story.description }}</p>
+          <p class="text-gray-900">{{ story.description }}</p>
         </div>
 
         <!-- Actions -->
